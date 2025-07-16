@@ -56,7 +56,7 @@ Replicate a booking calendar interface with pricing and selection functionality.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/booking-calendar.git
+git clone https://github.com/HarshAntalaTechier/booking-calendar.git
 cd booking-calendar
 
 # 2. Install dependencies
