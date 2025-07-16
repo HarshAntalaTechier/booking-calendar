@@ -217,7 +217,6 @@ const BookingCalendar: React.FC = () => {
               <div className="absolute inset-0 bg-[#be83bf] opacity-10 animate-ping rounded-full animation-delay-400"></div>
             </>
           )}
-
           {/* Enhanced sparkle effects for selected dates */}
           {isSelected && (
             <>
@@ -233,21 +232,19 @@ const BookingCalendar: React.FC = () => {
               </div>
             </>
           )}
-
           {/* Morphing number */}
           <span
             className={`font-bold transition-all duration-300 ${
               isAnimating ? "scale-150 rotate-180" : "scale-100 rotate-0"
-            } ${isSelected ? "animate-bounce" : ""}`}
+            }`}
           >
             {dateInfo.date}
           </span>
-
           {/* Animated price */}
           {isAvailable && (
             <span
               className={`text-xs transition-all duration-300 ${
-                isSelected ? "text-white animate-pulse" : "text-gray-600"
+                isSelected ? "" : "text-gray-600"
               } ${isAnimating ? "scale-125 rotate-12" : "scale-100"}`}
             >
               ${dateInfo.price}
@@ -256,7 +253,6 @@ const BookingCalendar: React.FC = () => {
           {!isAvailable && (
             <span className="text-xs text-gray-400 animate-pulse">--</span>
           )}
-
           {/* Hover glow effect with multiple layers */}
           {isAvailable && !isSelected && (
             <>
@@ -264,7 +260,6 @@ const BookingCalendar: React.FC = () => {
               <div className="absolute inset-0 bg-[#be83bf] opacity-0 hover:opacity-5 transition-all duration-300 blur-sm"></div>
             </>
           )}
-
           {/* Border animation for available dates */}
           {isAvailable && (
             <div className="absolute inset-0 border-2 border-transparent hover:border-[#be83bf]/30 transition-all duration-300 rounded-lg animate-border-dance"></div>
@@ -371,13 +366,10 @@ const BookingCalendar: React.FC = () => {
           </div>
 
           {/* Enhanced calendar widget */}
-          <div className="animate-slide-in-right animation-delay-300">
+          <div className="animation-delay-300">
             <div className="bg-white rounded-[2rem] shadow-2xl p-10 sm:p-12 max-w-md mx-auto w-full backdrop-blur-sm border border-white border-opacity-50 relative overflow-hidden hover:shadow-[0_0_50px_rgba(190,131,191,0.3)] transition-all duration-500 animate-float-slow">
               {/* Enhanced gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#be83bf]/5 via-white to-[#be83bf]/10 opacity-50"></div>
-
-              {/* Animated border */}
-              <div className="absolute inset-0 rounded-[2rem] border-2 border-transparent bg-gradient-to-r from-[#be83bf]/20 via-transparent to-[#be83bf]/20 animate-border-spin"></div>
 
               <div className="relative z-10">
                 <div className="text-center mb-10">
